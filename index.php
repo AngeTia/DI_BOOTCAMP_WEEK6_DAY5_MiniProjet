@@ -40,7 +40,7 @@ function renderGame($state, $activeCell, $player)
     return $output;
   }
 // Function to save keywoard value
-function translateKeypress($string)
+function translateKeyPress($string)
 {
     switch ($string) {
       case "\033[A":
@@ -71,7 +71,7 @@ function move($stdin, &$state, &$activeCell, &$player)
 {
     $key = fgets($stdin);
     if ($key) {
-      $key = translateKeypress($key);
+      $key = translateKeyPress($key);
       switch ($key) {
         case "UP":
           if ($activeCell[0] >= 1) {
