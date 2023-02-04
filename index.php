@@ -4,9 +4,11 @@ $state = [
     ['', '', ''],
     ['', '', ''],
 ];
+
 $player = 'X';
 // Select actif line
 $activeCell = [0 => 0, 1 => 0];
+
 // give game area
 function renderGame($state, $activeCell, $player)
 {
@@ -39,6 +41,7 @@ function renderGame($state, $activeCell, $player)
     }
     return $output;
   }
+
 // Function to save keywoard value
 function translateKeyPress($string)
 {
@@ -66,6 +69,7 @@ function translateKeyPress($string)
         return $string;
      }
 }
+
 // Function to move in game
 function move($stdin, &$state, &$activeCell, &$player)
 {
@@ -109,6 +113,7 @@ function move($stdin, &$state, &$activeCell, &$player)
        }
     }
   }
+  
 //To determine the winner
 function isWinState($state)
 {
